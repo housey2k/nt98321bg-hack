@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -x /usr/bin/pppoe ]
+then
+	/usr/bin/pppoe -p /var/pppoe.pid -I eth0 -T 80 -U  -m 1412
+else
+	/usr/etc/pppoe -p /var/pppoe.pid -I eth0 -T 80 -U  -m 1412
+fi

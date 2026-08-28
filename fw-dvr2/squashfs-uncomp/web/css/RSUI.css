@@ -1,0 +1,147 @@
+.rs_select {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: relative;
+	cursor: pointer
+}
+
+.select_top {
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+
+.select_text_box {
+	height: 100%;
+	width: auto;
+	margin-right: 20px;
+	line-height: 100%
+}
+
+.select_text {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	line-height: 22px
+}
+
+.select_text:disabled {
+	background-color: transparent
+}
+
+.select_arrow {
+	float: right;
+	width: 14px;
+	height: 14px;
+	margin-top: 3px
+}
+
+.select_bottom {
+	position: absolute;
+	top: 22px;
+	width: 100%;
+	display: none;
+	overflow: auto;
+	max-height: 114px;
+	z-index: 9999
+}
+
+.select_options {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse
+}
+
+.select_item {
+	margin: 0;
+	padding: 2px
+}
+
+.select_item_c87 {
+	margin: 0;
+	padding: 2px;
+}
+
+.slider .slider-back,
+.slider .slider-backStart,
+.slider .slider-fore,
+.slider .slider-bar {
+	cursor: pointer
+}
+
+.slider[type="Invalid"] .slider-back,
+.slider[type="Invalid"] .slider-backStart,
+.slider[type="Invalid"] .slider-fore,
+.slider[type="Invalid"] .slider-bar {
+	cursor: default
+}
+
+.slider-back,
+.slider-backStart {
+	overflow: hidden;
+	cursor: pointer;
+	height: 18px;
+	float: left
+}
+
+.slider-fore {
+	overflow: hidden;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	box-shadow: none
+}
+
+.slider-bar {
+	overflow: hidden;
+	margin-left: 0;
+	margin-top: 0px;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	box-shadow: none
+}
+
+.slider-tip {
+	float: left;
+	width: 10px;
+	height: 100%;
+	margin-left: 5px;
+	line-height: 24px
+}
+
+.slider-time {
+	display: inline-block;
+	width: 10px;
+	height: 6px;
+	line-height: 10px;
+	font-size: 10px
+}
+
+.slider-time div {
+	height: 4px
+}
+
+.slider-time div div {
+	display: inline-block;
+	height: 2px;
+	margin-top: 2px;
+	border: 0;
+}
+
+.slider-time span {
+	text-align: center
+}
+
+.rsselNearBy {
+	position: relative;
+	top: -10px;
+	left: -10px;
+	z-index: 100;
+	background: transparent;
+	padding: 10px
+}

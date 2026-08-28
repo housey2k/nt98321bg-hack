@@ -1,0 +1,82 @@
+#! /bin/sh
+#
+# Script to initiate a ppp connection. This is the first part of the
+# pair of scripts. This is not a secure pair of scripts as the codes
+# are visible with the 'ps' command.  However, it is simple.
+#
+# These are the parameters. Change as needed.
+[PPPCONFIG]
+# The telephone number for the connection
+TELEPHONE=#777
+# The account name for logon (as in 'George Burns')
+ACCOUNT=ctnet@mycdma.cn
+# The password for this account (and 'Gracie Allen')
+PASSWORD=vnet.mobi
+# Local IP address if known. Dynamic = 0.0.0.0
+LOCAL_IP=0.0.0.0
+# Remote IP address if desired. Normally 0.0.0.0
+REMOTE_IP=0.0.0.0
+# The proper netmask if needed
+NETMASK=255.255.255.0
+ENABLE=0
+NETWORKTYPE=0
+APNNO=ChinaNet
+AUTHPROTOCOL=0
+TTYNAME=ttyUSB0
+SCRIPT_AUTHPROTOCOL=
+
+#
+export TELEPHONE ACCOUNT PASSWORD APNNO
+# 
+# This is the location of the script which dials the phone and logs
+# in.  Please use the absolute file name as the $PATH variable is not
+# used on the connect option.  (To do so on a 'root' account would be
+# a security hole so don't ask.)
+if [ $NETWORKTYPE = "3" ] || [ $NETWORKTYPE = "5" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-DIAL
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+elif [ $NETWORKTYPE = "1" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-td
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+elif [ $NETWORKTYPE = "2" ] || [ $NETWORKTYPE = "4" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-wcdma
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+else
+	DIALER_SCRIPT=/usr/sbin/3gpd-DIAL
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+fi
+
+if [ $AUTHPROTOCOL = "1" ]; then
+	SCRIPT_AUTHPROTOCOL="+pap -chap -mschap-v2 -mschap login refuse-eap noauth"
+fi
+
+#route del default
+
+#
+# Initiate the connection
+# 
+# I put most of the common options on this command. Please, don't
+# forget the 'lock' option or some programs such as mgetty will not
+# work. The asyncmap and escape will permit the PPP link to work with
+# a telnet or rlogin connection. You are welcome to make any changes
+# as desired. Don't use the 'defaultroute' option if you currently
+# have a default route to an ethernet gateway.
+
+if [ $ENABLE = "0" ]; then
+   echo "pppoe disable"
+   exit 0
+else
+  echo "start pppoe enable"
+  exec /usr/sbin/pppd_3g -detach user $ACCOUNT password $PASSWORD \
+  /dev/$TTYNAME 115200 \
+	$SCRIPT_AUTHPROTOCOL nocrtscts nocdtrcts local usepeerdns 		\
+	unit 1 ipcp-accept-local ipcp-accept-remote lcp-echo-interval 5 lcp-echo-failure 20	\
+	noipdefault defaultroute idle 300 maxfail 1	\
+	debug kdebug 4 \
+	connect $DIALER_SCRIPT disconnect $DISCONNECT_SCRIPT \
+#	logfile /home/ppp2.4/pppdebug \
+fi
+#maxfail 0  init $INIT_SCRIPT disconnect $DISCONNECT_SCRIPT 
+
+
+

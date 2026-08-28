@@ -1,0 +1,48 @@
+appCloudExAbility=Yvov7pgKAe4=
+appRunningOut3Days=Dm8Hxy71
+appSystemLanguage=Portugal
+appVideoStandard=NTSC
+arch=arm
+baudrate=115200
+board=nvt-na51068
+board_name=nvt-na51068
+bootargs=earlyprintk console=ttyS0,115200 init=linuxrc mem=${osmem} rootwait nprofile_irq_duration=on root=/dev/mtdblock4 rootfstype=squashfs mtdparts=spi_nor.0
+bootcmd=setenv setargs setenv bootargs ${bootargs};run setargs;run loadlogo;run loadromfs
+bootdelay=0
+cpu=armv7
+da=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 u-boot.bin.img;sf probe 0;flwrite
+dc=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 custom-x.cramfs.img;sf probe 0;flwrite
+dd=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 mtd-x.jffs2.img;sf probe 0;flwrite
+de=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 u-boot.env.img;sf probe 0;flwrite
+df=eth_init;mw.b 0x02000000 ff 100000;tftpboot 0x02000000 fdt.bin.img;flwrite
+dl=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 logo-x.cramfs.img;sf probe 0;flwrite
+dr=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 romfs-x.cramfs.img;sf probe 0;flwrite
+du=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 user-x.cramfs.img;sf probe 0;flwrite
+dw=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 web-x.cramfs.img;sf probe 0;flwrite
+eth1addr=00:0b:3d:10:00:01
+ethact=eth1
+ethaddr=00:0b:3f:00:00:01
+ethprime=eth0
+fdt_high=0x04000000
+gatewayip=192.168.68.254
+hostname=oaalnx
+ipaddr=192.168.68.101
+ld=eth_init;mw.b 0x02000000 ff 100000;tftpboot 0x02000000 loader.bin.img;flwrite
+loadlogo=sf probe 0;sf read 0x04000000 0xF60000 0x20000;logoload 0x04000000;decjpg 0;bootlogo
+loadromfs=sf probe 0;sf read 0xB00000 0xB0000 0x370000;squashfsload;nvt_boot
+mtdids=nor0=spi_nor.0
+mtdparts=mtdparts=spi_nor.0:0x10000@0x0(loader),0x20000@0x10000(fdt),0x20000@0x30000(fdt.restore),0x60000@0x50000(boot),0x370000@0xb0000(romfs),0x780000@0x420000(usr),0x70000@0xba0000(web),0x350000@0xc10000(custom),0x20000@0xf60000(logo),0x80000@0xf80000(mtd)
+netmask=255.255.255.0
+osmem=0xb400000
+serverip=192.168.68.100
+soc=nvt-na51068
+stderr=serial
+stdin=serial
+stdout=serial
+tk=eth_init;tftpboot 0x02000000 uImage;setenv setargs setenv bootargs ${bootargs};run setargs;nvt_boot 0x02000000
+ua=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 upall_verify.img;sf probe 0;flwrite
+up=eth_init;mw.b 0x02000000 ff 0x1000000;tftpboot 0x02000000 update.img;sf probe 0;flwrite
+vendor=novatek
+ver=U-Boot 2016.07 (Apr 11 2022 - 13:54:25 +0800)
+
+Environment size: 2578/65532 bytes

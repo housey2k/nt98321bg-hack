@@ -1,0 +1,114 @@
+#!/bin/sh
+# fstab devices create
+#source /etc/profile_prjcfg
+#mkdir /var/run/lock
+
+#telnetd purpose
+#mknod -m 666 /dev/ptmx c 5 2
+mkdir /dev/pts
+mount -t devpts devpts /dev/pts
+
+# mount root filesystem in read-write mode
+/bin/echo "Mounting root fs rw ..."
+/bin/mount -n -o remount,rw /
+
+# mount all other filesystems
+/bin/echo "Mounting other filesystems ..."
+/bin/mount -a
+echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+
+/bin/echo "Bringing up interfaces ..."
+
+mount -t squashfs /dev/mtdblock5 /usr   
+mount -t squashfs /dev/mtdblock6 /mnt/web
+mount -t squashfs /dev/mtdblock7 /mnt/custom
+mount  /dev/mtdblock8 /mnt/logo
+mount -t jffs2 /dev/mtdblock9 /mnt/mtd
+if [ $? -ne 0 ];then
+ echo "Clean up the old data in the 'mtd' partition."
+ /sbin/flash_eraseall -j -q /dev/mtd9
+ mount -t jffs2 /dev/mtdblock9 /mnt/mtd
+fi
+
+mount -t ramfs  /dev/mem        /var
+#mount -t usbfs none /proc/bus/usb/
+
+mkdir -p /mnt/mtd/Config /mnt/mtd/Log /mnt/mtd/Config/ppp /mnt/mtd/Config/Json /var/tmp
+
+WdtMonitor &
+
+if [ ! -f /mnt/mtd/Config/HvrMode ] && [ -f /mnt/custom/HvrMode ]; then
+	cp /mnt/custom/HvrMode /mnt/mtd/Config/
+fi
+if [ -f /mnt/mtd/Config/ppp/3gdigal ]; then
+	chmod 777 /mnt/mtd/Config/ppp/3gdigal
+fi
+
+cd /usr/etc
+./loadmod
+ifconfig eth2 up
+ifconfig eth2 192.168.1.12
+echo 2548 > /proc/sys/vm/min_free_kbytes
+echo 655360 > /proc/sys/net/core/rmem_max
+
+routedaemon&
+dogtest &
+
+echo 100 > /proc/sys/vm/dirty_expire_centisecs
+echo 10 >  /proc/sys/vm/dirty_ratio
+echo 10 >  /proc/sys/vm/dirty_background_ratio
+echo 100 > /proc/sys/vm/dirty_writeback_centisecs
+echo 300 > /proc/sys/vm/vfs_cache_pressure
+#echo 4000 > /proc/sys/vm/min_free_kbytes
+
+timecheck &
+
+sleep 3
+
+ifconfig eth0 down
+
+#echo ssp 0x10 > /proc/nvt_info/nvt_pinmux/pinmux_set 
+#ifconfig eth0  10.10.88.244 netmask 255.255.255.0;route add default gw 10.10.88.254
+
+netinit &
+
+ifconfig eth0 up
+
+/usr/etc/pppd pty /etc/ppp/pppoe-start file /etc/ppp/pppoe-options &
+
+/mnt/custom/extapp.sh &
+
+echo 655360 > /proc/sys/net/core/rmem_max
+
+#unrar x /usr/bin/Sofia.rar /var/
+cp /usr/bin/Sofia.tar.lzma /var/
+cd /var/
+tar -axf /usr/bin/Sofia.tar.lzma
+
+chmod 777 /var/Sofia
+
+clear
+
+#if [ -e /dev/sda ]; then
+#    echo "/dev/sda exists"
+#    cd /bin/
+#    module_init
+#    exit
+#else
+#    echo "/dev/sda does not exist"
+#fi
+
+#sleep 10
+
+#echo "LD_PRELOAD ran"
+#LD_PRELOAD=/bin/dump_pool.so ./Sofia
+
+sleep 1
+
+rm /var/Sofia.tar.lzma -fr
+
+dvrHelper /lib/modules /usr/sbin/SofiaRun.sh 127.0.0.1 9578 1
+
+
+
+

@@ -1,0 +1,382 @@
+{
+	"Encode": [
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 4096,
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "1080P"
+					}
+				}
+			]
+		}
+	]
+}

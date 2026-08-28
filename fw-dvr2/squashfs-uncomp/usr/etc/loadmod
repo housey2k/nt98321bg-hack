@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#cd /usr/lib/modules/
+#unrar x /usr/lib/modules.rar /var/
+cd /var/
+tar -axf /usr/lib/modules.tar.lzma
+cd /var/modules/
+sh vg_boot.sh
+cd /var/
+rm /var/modules -fr
+cd /usr/etc/
+#./sysctl_asic.sh
+#./S81toe
+cd /

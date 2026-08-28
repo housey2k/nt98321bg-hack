@@ -1,0 +1,67 @@
+local loadfiles = {}
+local curName = {}
+
+function init(path)
+{
+	::dofile(path + "/RemoteBase", true);
+	print("path = "+path+"\n"); 
+}
+
+function loadFile(path, name):(loadfiles)
+{
+	//print("path = "+path+", name = "+name+"\n"); 
+	loadfiles.rawset(name, ::dofile(path, true));
+}
+
+function SetProtocol(name):(loadfiles, curName)
+{ 
+	curName.rawset("Selected", name);
+	return true;
+}
+
+function getCmdLen():(loadfiles, curName)
+{ 
+	return loadfiles[curName["Selected"]].getCmdLen();
+} 
+
+function getHeadLen():(loadfiles, curName)
+{ 
+	return loadfiles[curName["Selected"]].getHeadLen();
+} 
+
+function getHead():(loadfiles, curName)
+{ 
+	return loadfiles[curName["Selected"]].getHead();
+} 
+
+function ParseData(cmdBuf):(loadfiles, curName)
+{
+	//print("MainComm ParseData "+curName["Selected"]+"\n");
+	return loadfiles[curName["Selected"]].ParseData(cmdBuf);
+}
+
+function getProtocolNum():(loadfiles)
+{
+	return loadfiles.len();
+}
+
+function InitCmd(name):(loadfiles, curName)
+{ 
+	curName.rawset("Selected", name);
+	print("name: "+curName["Selected"]+"\n");
+} 
+
+function loadProtocolAttr(name):(loadfiles)
+{
+	local Attr = {};
+	Attr.rawset("Name", loadfiles[name].Name);
+	Attr.rawset("Type", loadfiles[name].Type);
+	Attr.rawset("CommandLen", loadfiles[name].CommandLen);
+	Attr.rawset("HeadLen", loadfiles[name].HeadLen);
+	return Attr;
+}
+
+function getHeadData(name):(loadfiles)
+{
+	return loadfiles[name].HeadData;
+}

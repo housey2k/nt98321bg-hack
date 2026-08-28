@@ -1,0 +1,343 @@
+<theme name="default"
+	path=".">
+	<!-- 以下为GUI的全局颜色表配置 -->
+	<colortable>
+		<color_window red="12"
+			green="21"
+			blue="50"
+			alpha="128" />
+		<color_popup red="58"
+			green="74"
+			blue="86"
+			alpha="128" />
+		<color_ctrl red="48"
+			green="48"
+			blue="48"
+			alpha="128" />
+		<color_ctrlselected red="96"
+			green="96"
+			blue="96"
+			alpha="128" />
+		<color_windowtext red="160"
+			green="192"
+			blue="255"
+			alpha="255" />
+		<color_titletext red="160"
+			green="192"
+			blue="255"
+			alpha="255" />
+		<color_frame red="48"
+			green="144"
+			blue="216"
+			alpha="128" />
+		<color_frameselected red="128"
+			green="128"
+			blue="192"
+			alpha="128"/>
+		<color_ctrltext red="255"
+			green="255"
+			blue="255"
+			alpha="255" />
+		<color_ctrltextselected red="128"
+			green="255"
+			blue="64"
+			alpha="255" />	
+		<color_ctrltextdisabled red="120"
+			green="120"
+			blue="120"
+			alpha="255" />
+		<color_transparent red="255"
+			green="0"
+			blue="255"
+			alpha="0" />
+	</colortable>
+	<ctrlattribute>
+		<button image_normal="ButtonNormal.gif" 
+			image_selected="ButtonSelected.gif" 
+			image_pushed="ButtonPushed.gif" 
+			image_disabled="ButtonDisabled.gif" />
+		<checkbox image_normal="CheckBoxNormalFalse.gif" 
+			image_normaltrue="CheckBoxNormalTrue.gif" 
+			image_selected="CheckBoxSelectedFalse.gif" 
+			image_selectedtrue="CheckBoxSelectedTrue.gif"
+			image_disabled="CheckBoxDisabledFalse.gif"
+			image_disabledtrue="CheckBoxDisabledTrue.gif" />
+		<radio image_normal="RadioNormalFalse.gif" 
+			image_normaltrue="RadioNormalTrue.gif" 
+			image_selected="RadioSelectedFalse.gif" 
+			image_selectedtrue="RadioSelectedTrue.gif"
+			image_disabled="RadioDisabledFalse.gif"
+			image_disabledtrue="RadioDisabledTrue.gif" />
+		<listbox image_edit_normal="ListboxEditNormal.gif"
+			image_edit_selected="ListboxEditSelected.gif"
+			image_edit_pushed="ListboxEditPushed.gif"
+			image_edit_disabled="ListboxEditDisabled.gif"
+			image_delete_normal="ListboxDelNormal.gif"
+			image_delete_selected="ListboxDelSelected.gif"
+			image_delete_pushed="ListboxDelPushed.gif"
+			image_delete_disabled="ListboxDelDisabled.gif">
+			<BkColor red="12"
+				green="21"
+				blue="50"
+				alpha="128" /> <--!listbox背景颜色，一般等同于color_window，可以不填 -->
+			<TitleLine red="48"
+				green="144"
+				blue="216"
+				alpha="128" /> <--!listbox边框颜色，一般等同于color_frame，可以不填 -->
+			<CtrlSelect red="128"
+				green="128"
+				blue="192"
+				alpha="128"/> <--!listbox选中fram，一般等同于color_frameselected，可以不填 -->
+			<SelectColor red="128"
+				green="255"
+				blue="64"
+				alpha="255" /> <--!listbox选中color_ctrltextselected，一般等同于color_frameselected，可以不填 -->			
+		</listbox>
+		<!-- 页面内部的一些图片，包括关闭按钮图片，页面背景图片等 -->
+		<page image_closenormal="OneClick/ButtonCloseNormal.gif"
+			image_closeselected="OneClick/ButtonCloseSelected.gif"
+			image_closepushed="OneClick/ButtonClosePushed.gif"
+			image_closedisabled="OneClick/ButtonCloseDisabled.gif" 
+			image_framenormal="OneClick/PageFrameNormal.gif"
+			image_framesmall="OneClick/PageFrameSmall.gif"
+			icon_tip="OneClick/TipIcon.gif">
+			<image_framenormal left="50" 
+				top="50"
+				right="100"
+				bottom="180" />
+			<image_framesmall left="50" 
+				top="50"
+				right="100"
+				bottom="180" />
+			<image_PagePlay left="26" 
+				top="24"
+				right="266"
+				bottom="78" />	<!-- 回放页面拉伸区域 -->
+			<size width=790 height=600/>	<!--各个页面大小配置 -->
+			<closebutton/>			<!--有代表有关闭按钮,注释掉该行程序将不显示关闭按钮 -->
+			<title align="left" />		<!--标题左对齐，有left, center等属性-->
+			<style rclick="exit" />		<!--页面右键时行为，可以是exit表示退出页面，menu表示弹出右键菜单 -->
+							<!--控件显示区域 -->
+			<layoutmargin left="0"
+				top="0"
+				right="0"
+				bottom="18" />
+			<tipstatic/>	<!--有代表有页面信息提示,注释掉该行程序将不再提示 -->
+			<icon_tip_offset left="30"
+				top="104"
+				right="54"
+				bottom="80" />	<!--代表页面信息提示图标偏移位置 -->
+			<tipstatic_offset left="68"
+				top="104"
+				right="44"
+				bottom="50" />	<!--代表页面信息提示提示偏移位置 注意right表示离开右边边框距离-->
+			<color_tipstatic red="160"
+				green="192"
+				blue="255"
+				alpha="255" />	<!--提示信息标题颜色-->
+			<menuclosebutton/>			<!--有代表主菜单下面有关闭按钮 注释掉该行程序将不显示关闭按钮-->
+			<menuclose_offset left="24"
+				top="18"
+				right="0"
+				bottom="0" /> <!--主菜单下面有关闭按钮 位置，偏移位置，后面两位无效-->
+		</page>
+		<menu image_panel="MenuBar.gif"
+			image_paneltitle="MenuBar.gif"
+			image_itemnormal="MenuItemNormal.gif"
+			image_itemselected="MenuItemSelected.gif"
+			image_bar="MenuBar.gif" />
+		<sliderctrl image_railnormal="SliderCtrlRailNormal.gif"
+			image_railelapsednormal="SliderCtrlRailElapsedNormal.gif"
+			image_trackernormal="SliderCtrlTrackerNormal.gif"
+			image_trackerselected="SliderCtrlTrackerSelected.gif"
+			image_railselected="SliderCtrlRailSelected.gif"
+			image_railelapsedselected="SliderCtrlRailElapsedSelected.gif" />
+		<static	font="normal"/> 
+		<windowgrid>
+			<color_framenormal red="180" green="150" blue="210" alpha="0" />
+			<color_frameselected red="0" green="255" blue="0" alpha="0" />
+			<color_framezoomline red="255" green="0" blue="255" alpha="0" />
+			<color_DesktopWindow_back red="48" green="48" blue="48" alpha="128" />
+			<color_DesktopWindow_front red="160" green="192" blue="255" alpha="255" />
+		</windowgrid>
+		<inputtray image_control="InputTrayControl.gif"
+			image_numeric="InputTrayNumeric.gif"
+			image_lowercase="InputTrayLowercase.gif"
+			image_uppercase="InputTrayUppercase.gif"
+			image_pinyin="InputTrayPinyin.gif"
+			image_mark="InputTrayMark.gif" />
+		<playbacktable>
+			<color_Background red="12" green="21" blue="50" alpha="0" /><!--整个背景色-->
+			<color_TableBackground red="180" green="180" blue="180" alpha="0" /><!--表格内背景色-->
+			<color_FontCurTime red="25" green="66" blue="255" alpha="0" /><!--当前时间 -->
+			<color_CommonRec red="0" green="255" blue="0" alpha="0" /><!--普通录像-->
+			<color_AllAlarmRec red="255" green="0" blue="0" alpha="0" /><!--报警-->
+			<color_HandRec red="247" green="241" blue="93" alpha="0" /><!--手动录像-->
+			<color_HasRec red="128" green="255" blue="65" alpha="0" /><!--表示是否有录像-->
+		</playbacktable>
+	</ctrlattribute>
+	<!-- 各个页面大小配置 -->
+	
+	<!-- 主菜单结构配置 -->
+	<!-- PageInfo：系统信息
+	 	PageConfig：系统设置
+	 	PageTool: 管理工具
+	 	PageAlarm：报警
+	 	PageRecord：录像功能	 	
+	 	PageExit：系统注销
+		PageBackup：备份
+		PagePlay：回放
+		PageInfoHdd: 硬盘信息页面
+		PageInfoVersion：系统信息页面
+		PageInfoBps：码流信息页面
+		pPageInfoLog：日志信息页面
+		PageInfoAlarm：报警信息页面
+		PageInfoOnlineUser: 在线用户界面
+		PageConfigGeneral：普通设置页面
+		PageConfigCom：串口设置页面
+		PageConfigNetCommon：通用网络设置页面
+		PageConfigNetServices：网络服务页面
+		PageConfigDefault: 默认设置页面
+		PageConfigEncode：编码设置页面   
+		PageConfigRecord：录像设置页面
+		PageConfigSnapshot：抓图设置页面
+		PageConfigAlarm：报警设置页面
+		PageConfigMotionDetect：移动侦测页面
+		PageConfigVideoBlind：视频遮挡页面
+		PageConfigVideoLoss：视频丢失页面
+		PageConfigNetAlarm：网络报警页面
+		PageConfigAbnormal：异常处理页面
+		PageConfigPtz：云台设置页面
+		PageOutputDisplay：输出模式页面
+		PageConfigTour：轮巡设置页面
+		PageHddManager：硬盘管理页面
+		PageRecordMode：录像模式页面
+		PageAlarmOut: 报警输出页面 
+		PageDeviceDesc：设备信息页面
+		PageUserManager：用户管理页面
+		PageTVAdjust：输出调节页面
+		PageAutoMaintain：自动维护页面
+		PageUpgrade：系统升级页面
+		PageStoragePosition：存储位置页面
+		PageConfigDigiCh:通道管理
+		PageDigitalConfig:数字通道
+		PageDigitStatus:通道状态
+		PageDigitalInfo:通道模式
+		PageConfigPos：Pos设置页面
+		PageConfigSpot:Spot口设置页面
+		PageCarFunction:车载功能
+		PageConfigCarStatus:车辆状态
+		PageConfigDelay:延时设置
+		PageConfigGPSTiming:GPS校时
+		PageConfigCarDisplay:车载相关的显示设置
+		PageImExport:日志和配置的导入导出
+		PageConfigVideoAnalyze:视频分析
+		PageConfigDvrBootType:车载开关机模式设置页面
+	-->
+	<MainMenu>
+		<!--WIFI-NVR-配置页面-->
+		<PageWIFIHost>
+		</PageWIFIHost>
+		<!-- 录像功能页面 -->
+		<PageRecord> 
+			<PageConfigRecord />
+			<PageConfigSnapshot />
+			<PagePlay />
+			<PageBackup />
+		</PageRecord> 
+		<PageSnapUpload />
+		<!-- 报警功能页面 -->
+		<PageAlarm>
+			<PageConfigMotionDetect />
+			<PageConfigAbnormal />
+			<PageConfigPIRAlarm/>
+			<PageConfigSmartMotionDetect/>
+			<PageConfigAlarmMessageUpLoad/>
+			<PageFaceAlarm/>
+			<PageCarAlarm/>
+			<PageConfigIOTAlarm>
+				<PageConfigIOTDevice />
+				<PageConfigIOTScene />
+			</PageConfigIOTAlarm>
+			<PageConfigCommonAlarm>
+				<PageConfigBlindDetect />
+				<PageConfigLossDetect />
+				<PageConfigAlarm />
+				<PageAlarmOut />
+				<PageConfigVideoAnalyze />
+			</PageConfigCommonAlarm>
+		</PageAlarm>
+		<!-- 系统设置页面 -->
+		<PageConfig>
+			<PageConfigGeneral />
+			<PageConfigEncode />
+			<PageConfigNetCommon />
+			<PageConfigNetService />
+			<PageConfigDisplay />
+			<PageConfigPtz  />
+			<PageConfigComm  />
+			<PageConfigTour />
+			<PageConfigSpot />
+			<!-- 通道管理 -->
+			<PageConfigDigiCh>
+				<PageDigitalConfig />
+				<PageDigitStatus />
+				<PageDigitalInfo />
+			</PageConfigDigiCh>
+			<PageXviSet>
+				<PageCoaxialControlCamera />
+				<PageImageEnhance />
+				<PageXVIUpgrade />
+				<PageCameraImExport />
+				<PageXVIAudioSet />
+			</PageXviSet>
+			<PageCustomPreview>
+			</PageCustomPreview>
+			<PageConfigNetIPv6 />
+		</PageConfig>
+		<!-- 管理工具页面 -->
+		<PageTool>
+			<PageHddManager />
+			<PageUserManager />
+			<PageInfoOnlineUser />
+			<PageTVAdjust />
+			<PageAutoMaintain />
+			<PageConfigDefault />
+			<PageUpgrade />
+			<PageDeviceDesc />
+			<PageConfigPos />
+			<PageImExport />
+			<PageConfigNormalGPSTiming />
+		</PageTool>
+		<!-- 系统信息界面 -->
+		<PageInfo>
+			<PageInfoHdd />
+			<PageInfoBps />
+			<PageInfoLog />
+			<PageInfoVersion /> 
+		</PageInfo>
+		<PageExit>
+		</PageExit>
+		<!-- 车载功能界面 -->
+		<PageCarFunction>
+			<PageConfigCarStatus />
+			<PageConfigDelay />
+			<PageConfigGPSTiming />
+			<PageConfigCarDisplay />
+			<PageConfigDvrBootType />
+		</PageCarFunction>
+		<!-- 系统注销界面 -->
+	</MainMenu>
+	<!-- 向导功能页面-->
+	<Guide>
+		<PageGuideCameraTest />
+		<PageGuideGeneral />
+		<PageGuideNetTest />
+		<PageGuideAPPEncode />
+		<PageGuideSNEncode />
+		<PageGuideChoose />
+		<PageDigGuide />
+		<PageWIFIHost />
+		<PageGuideTail />
+	</Guide>
+</theme>

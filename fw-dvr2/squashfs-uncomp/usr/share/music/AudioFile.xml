@@ -1,0 +1,175 @@
+<AudioType>
+	<!--
+	CUSTOM_AUDIO = -2,
+	MORENJINGBAO = 0,
+	RENXINGJIANCE ,
+	SHIPINGZHEDANG ,
+	WANGLUODUANKAI ,		//数字通道视频丢失使用该报警音
+	YICHANGBAOJING ,
+	SHIPINDIUSHI,			//模拟通道视频丢失使用该报警音
+
+	AudioEnd,
+	-->
+	<TypePair iType="-2"
+		TypeStr="CUSTOM_AUDIO"/>
+	<TypePair iType="0"
+		TypeStr="MORENJINGBAO"/>
+	<TypePair iType="1"
+		TypeStr="RENXINGJIANCE"/>
+	<TypePair iType="2"
+		TypeStr="SHIPINGZHEDANG"/>
+	<TypePair iType="3"
+		TypeStr="WANGLUODUANKAI"/>
+	<TypePair iType="4"
+		TypeStr="YICHANGBAOJING"/>
+	<TypePair iType="5"
+		TypeStr="SHIPINDIUSHI"/>
+	<TypePair iType="6"
+		TypeStr="POLICEALARM"/>
+	<TypePair iType="7"
+		TypeStr="HUANYINGGUANGLIN"/>
+	<TypePair iType="8"
+		TypeStr="JIANKONGQUYU"/>
+	<TypePair iType="9"
+		TypeStr="JINGJIEQUYU"/>
+	<TypePair iType="10"
+		TypeStr="JINZHITINGCHE"/>
+	<TypePair iType="11"
+		TypeStr="QINGWUCHUPENG"/>
+	<TypePair iType="12"
+		TypeStr="QINGWUPANPA"/>
+	<TypePair iType="13"
+		TypeStr="SHUISHENWEIXIAN"/>
+	<TypePair iType="14"
+		TypeStr="SIRENLINGYU"/>
+	<TypePair iType="15"
+		TypeStr="WEIXIANYUQU"/>
+	<TypePair iType="16"
+		TypeStr="XIAOJIAOJINGBAO"/>
+	<TypePair iType="17"
+		TypeStr="NULL"/>
+</AudioType>
+<AudioPair>
+	<!--
+		<Pair AudioName = 音频文件名
+		AudioType = 音频对应枚举
+		StrName = 显示在界面上的字符串/>
+	-->
+	<Pair AudioName = "morenjingbao.pcm"
+		AudioType = "MORENJINGBAO"
+		StrName = "&ConfigAlarm.AudioType1"/>
+	<Pair AudioName = "renxingjiance.pcm"
+		AudioType = "RENXINGJIANCE"
+		StrName = "&ConfigAlarm.AudioType2"/>
+	<Pair AudioName = "shipingzhedang.pcm"
+		AudioType = "SHIPINGZHEDANG"
+		StrName = "&ConfigAlarm.AudioType3"/>
+	<Pair AudioName = "wangluoduankai.pcm"
+		AudioType = "WANGLUODUANKAI"
+		StrName = "&ConfigAlarm.AudioType4"/>
+	<Pair AudioName = "yichangbaojing.pcm"
+		AudioType = "YICHANGBAOJING"
+		StrName = "&ConfigAlarm.AudioType5"/>
+	<Pair AudioName = "shipindiushi.pcm"
+		AudioType = "SHIPINDIUSHI"
+		StrName = "&ConfigAlarm.AudioType6"/>
+	<Pair AudioName = "PoliceAlarm.pcm"
+		AudioType = "POLICEALARM"
+		StrName = "&ConfigAlarm.AudioType7"/>
+	<Pair AudioName = "huanyingguanglin.mp3"
+		AudioType = "HUANYINGGUANGLIN"
+		StrName = "&ConfigAlarm.AudioType8"/>
+	<Pair AudioName = "jiankongquyu.mp3"
+		AudioType = "JIANKONGQUYU"
+		StrName = "&ConfigAlarm.AudioType9"/>
+	<Pair AudioName = "jingjiequyu.mp3"
+		AudioType = "JINGJIEQUYU"
+		StrName = "&ConfigAlarm.AudioType10"/>
+	<Pair AudioName = "jinzhitingche.mp3"
+		AudioType = "JINZHITINGCHE"
+		StrName = "&ConfigAlarm.AudioType11"/>
+	<Pair AudioName = "qingwuchupeng.mp3"
+		AudioType = "QINGWUCHUPENG"
+		StrName = "&ConfigAlarm.AudioType12"/>
+	<Pair AudioName = "qingwupanpa.mp3"
+		AudioType = "QINGWUPANPA"
+		StrName = "&ConfigAlarm.AudioType13"/>
+	<Pair AudioName = "shuishenweixian.mp3"
+		AudioType = "SHUISHENWEIXIAN"
+		StrName = "&ConfigAlarm.AudioType14"/>
+	<Pair AudioName = "sirenlingyu.mp3"
+		AudioType = "SIRENLINGYU"
+		StrName = "&ConfigAlarm.AudioType15"/>
+	<Pair AudioName = "weixianquyu.mp3"
+		AudioType = "WEIXIANYUQU"
+		StrName = "&ConfigAlarm.AudioType16"/>
+	<Pair AudioName = "xiaojiaojingbao.mp3"
+		AudioType = "XIAOJIAOJINGBAO"
+		StrName = "&ConfigAlarm.AudioType17"/>
+	<Pair AudioName = "NULL.mp3"
+		AudioType = "NULL"
+		StrName = "&ConfigAlarm.AudioType18"/>
+</AudioPair>
+<AlarmAudio>
+	<VideoBlind>
+		<!--视频遮挡-->
+		<SHIPINGZHEDANG/>
+		<MORENJINGBAO/>
+	</VideoBlind>
+	<VideoLoss>
+		<!--视频丢失-->
+		<WANGLUODUANKAI/>
+		<SHIPINDIUSHI/>
+		<MORENJINGBAO/>
+	</VideoLoss>
+	<HumanDetect>
+		<!--
+			人形/人脸/移动 均一致? 后续可分开
+		-->
+		<RENXINGJIANCE/>
+		<MORENJINGBAO/>
+	</HumanDetect>
+	<Abnormal>
+		<!--异常处理-->
+		<MORENJINGBAO/>
+	</Abnormal>
+	<Input>
+		<!--报警输入-->
+		<MORENJINGBAO/>
+	</Input>
+	<CarShape>
+		<!--车型报警-->
+		<MORENJINGBAO/>
+	</CarShape>
+	<Iot>
+		<!--IOT报警-->
+		<MORENJINGBAO/>
+		<RENXINGJIANCE/>
+		<YICHANGBAOJING/>
+		<POLICEALARM/>
+		<NULL/>
+	</Iot>
+	<IntellAlarm>
+		<!--新智能警戒-->
+		<MORENJINGBAO/>
+		<RENXINGJIANCE/>
+		<SHIPINGZHEDANG/>
+		<WANGLUODUANKAI/>
+		<YICHANGBAOJING/>
+		<SHIPINDIUSHI/>
+		<HUANYINGGUANGLIN/>
+		<JIANKONGQUYU/>
+		<JINGJIEQUYU/>
+		<JINZHITINGCHE/>
+		<QINGWUCHUPENG/>
+		<QINGWUPANPA/>
+		<SHUISHENWEIXIAN/>
+		<SIRENLINGYU/>
+		<WEIXIANYUQU/>
+		<XIAOJIAOJINGBAO/>
+	</IntellAlarm>
+	<Default>
+		<!--报警默认音频,没有指定音频的报警可以以此为默认-->
+		<MORENJINGBAO/>
+	</Default>
+</AlarmAudio>

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mount -t nfs 10.6.4.100:/home/share /home -o nolock
+mount -t nfs 10.6.4.100:/home/share/hishare/lib /lib -o nolock
+echo "mount -t nfs 10.6.4.100:/home/share /home -o nolock"
+echo "mount -t nfs 10.6.4.100:/home/share/hishare/lib /lib -o nolock"
+

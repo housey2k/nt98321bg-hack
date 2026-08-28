@@ -1,0 +1,41 @@
+<LedType>
+	<!-- ledenum
+		LED_NORMAL_DARK = 0,	// 熄灭 0
+		LED_GREAN_NORMALLIGHT,		// 绿色常亮 1
+		LED_GREAN_FASTFLASH,		// 绿色快闪 2
+		LED_GREAN_SLOWFLASH,		// 绿色慢闪 3
+		LED_RED_NORMALLIGHT,		// 红色常亮 4
+		LED_RED_FASTFLASH,			// 红色快闪 5
+		LED_RED_SLOWFLASH,			// 红色慢闪 6
+		LED_GREANRED_NORMALLIGHT,	// 黄色常亮 7
+		LED_GREANRED_FASTFLASH,		// 黄色快闪 8
+		LED_GREANRED_SLOWFLASH,		// 黄色慢闪 9
+		LED_GREANRED_ALTER,			// 交替 10
+	-->
+	<TypePair EnumValue="0"
+		TypeName="LED_NORMAL_DARK"/>
+	<TypePair EnumValue="1"
+		TypeName="LED_GREAN_NORMALLIGHT"/>
+	<TypePair EnumValue="2"
+		TypeName="LED_GREAN_FASTFLASH"/>
+	<TypePair EnumValue="4"
+		TypeName="LED_RED_NORMALLIGHT"/>
+	<TypePair EnumValue="5"
+		TypeName="LED_RED_FASTFLASH"/>
+</LedType>
+<LedPair>
+	<!--
+		<LedType = 音频对应枚举
+		TransKey = 显示在界面上的字符串/>
+	-->
+	<Pair TypeName = "LED_NORMAL_DARK"
+		TransKey = "&ConfigIOT.AlarmLedType0"/>
+	<Pair TypeName = "LED_GREAN_NORMALLIGHT"
+		TransKey = "&ConfigIOT.AlarmLedType1"/>
+	<Pair TypeName = "LED_GREAN_FASTFLASH"
+		TransKey = "&ConfigIOT.AlarmLedType2"/>
+	<Pair TypeName = "LED_RED_NORMALLIGHT"
+		TransKey = "&ConfigIOT.AlarmLedType4"/>
+	<Pair TypeName = "LED_RED_FASTFLASH"
+		TransKey = "&ConfigIOT.AlarmLedType5"/>
+</LedPair>

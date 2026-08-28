@@ -1,0 +1,45 @@
+#!/bin/sh
+
+echo "Hacked by HouseY2K"
+
+
+echo "Mounting linux VFS"
+# Mount critical Linux kernel virtual filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devpts devpts /dev/pts 2>/dev/null || true
+mount -t ramfs ramfs /var
+
+echo "Mounting /usr from /dev/mtdblock5"
+# Mount usr fs
+mount -t squashfs /dev/mtdblock5 /usr
+
+echo "Enabling hotplug device nodes (mdev)"
+# Enable hotplug device nodes (mdev)
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+
+echo "Bringing up network interface"
+
+# Bring up network interface if needed for ping/SSH debug
+ifconfig lo 127.0.0.1 up
+ifconfig eth0 192.168.1.100 netmask 255.255.255.0 up 2>/dev/null || true
+
+echo "Loading modules"
+
+cd /usr
+./loadmod
+
+echo "Disabling watchdog(s)"
+echo "V" > /dev/watchdog
+echo "V" > /dev/watchdog0
+
+echo "Loading custom sofia"
+
+chmod +x Sofia
+chmod 777 Sofia
+
+
+echo "=========================================="
+echo "   CUSTOM KERNEL BOOT SUCCESSFUL!       "
+echo "=========================================="

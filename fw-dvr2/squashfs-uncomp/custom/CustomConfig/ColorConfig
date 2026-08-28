@@ -1,0 +1,35 @@
+chip:NVT98321
+{
+	colormode:standard
+	{
+		brightness:vo:[51] vga:[50] hdmi:[50];
+		contrast:  vo:[41] vga:[50] hdmi:[50];
+		saturation:vo:[53] vga:[50] hdmi:[50];
+		hue:       vo:[59] vga:[50] hdmi:[50];
+		gain:      vo:[0]  vga:[15] hdmi:[0];
+	};
+	colormode:light
+	{
+		brightness:vo:[51] vga:[50] hdmi:[50];
+		contrast:  vo:[41] vga:[50] hdmi:[50];
+		saturation:vo:[45] vga:[50] hdmi:[50];
+		hue:       vo:[57] vga:[50] hdmi:[50];
+		gain:      vo:[0]  vga:[15] hdmi:[0];
+	};
+	colormode:soft
+	{
+		brightness:vo:[49] vga:[50] hdmi:[50];
+		contrast:  vo:[37] vga:[50] hdmi:[50];
+		saturation:vo:[53] vga:[50] hdmi:[50];
+		hue:       vo:[59] vga:[50] hdmi:[50];
+		gain:      vo:[0]  vga:[15] hdmi:[0];
+	};
+	colormode:gorgeous
+	{
+		brightness:vo:[51] vga:[50] hdmi:[50];
+		contrast:  vo:[41] vga:[50] hdmi:[50];
+		saturation:vo:[61] vga:[50] hdmi:[50];
+		hue:       vo:[57] vga:[50] hdmi:[50];
+		gain:      vo:[0]  vga:[15] hdmi:[0];
+	};
+};

@@ -1,0 +1,150 @@
+class DaHua extends RS485Base{
+	// 协议的显示名称, 最好与文件名直接对应，不能超过16字符
+	Name = "DaHua"
+
+	// 指明是云台协议还是矩阵协议，使用"RS485"表示
+	Type = "RS485"
+
+	CommandLen = 4
+
+	HeadLen = 1
+
+	// 命令头数据
+	HeadData = [0x80]
+
+	// 地址码
+	RS485Addr = 0x00
+
+	// 有弹起消息
+	UpMsg = 1
+
+	// 通过脚本解析
+	ParseMode = 1
+
+	// 命令码
+	KEYOperator = {
+				KEYZERO0 = [0x00, KEYVALUE.KEY_0],
+				KEYONE0 = [0x01, KEYVALUE.KEY_1],
+				KEYTWO0 = [0x02, KEYVALUE.KEY_2],
+				KEYTHREE0 = [0x03, KEYVALUE.KEY_3],
+				KEYFOUR0 = [0x04, KEYVALUE.KEY_4], 
+				KEYFIVE0 = [0x05, KEYVALUE.KEY_5],
+				KEYSIX0 = [0x06, KEYVALUE.KEY_6],
+				KEYSEVEN0 = [0x07, KEYVALUE.KEY_7],
+				KEYEIGHT0 = [0x08, KEYVALUE.KEY_8],
+				KEYNINE0 = [0x09, KEYVALUE.KEY_9],
+
+				KEYUP0 = [0x0a, KEYVALUE.KEY_UP],
+				KEYDOWN0 = [0x0b, KEYVALUE.KEY_DOWN],
+				KEYLEFT0 = [0x0c, KEYVALUE.KEY_LEFT],
+				KEYRIGHT0 = [0x0d, KEYVALUE.KEY_RIGHT],
+				
+				KEYESC0 = [0x0e, KEYVALUE.KEY_ESC],
+				KEYENTER = [0x0f, KEYVALUE.KEY_RET],
+				KEYREC0 = [0x10, KEYVALUE.KEY_REC],
+				KEYSPLIT9A = [0x11, KEYVALUE.KEY_SPLIT9],
+
+				//Handler key
+				KEYUP1 = [0x41, KEYVALUE.KEY_UP],
+				KEYDOWN1 = [0x42, KEYVALUE.KEY_DOWN],
+				KEYLEFT1 = [0x43, KEYVALUE.KEY_LEFT],
+				KEYRIGHT1 = [0x44, KEYVALUE.KEY_RIGHT],
+				KEYLEFT2 = [0x45, KEYVALUE.KEY_LEFT],   //left up    -> left
+				KEYLEFT3 = [0x46, KEYVALUE.KEY_LEFT],   //left down  -> left
+				KEYRIGHT2 = [0x47, KEYVALUE.KEY_RIGHT], //right up   -> right
+				KEYRIGHT3 = [0x48, KEYVALUE.KEY_RIGHT], //right down -> right
+				KEYWIDE0 = [0x49, KEYVALUE.KEY_WIDE],
+				KEYTELE0 = [0x4a, KEYVALUE.KEY_TELE],
+
+				KEYREC1 = [0x10, KEYVALUE.KEY_REC],
+				KEYSPLIT = [0x11, KEYVALUE.KEY_SPLIT],
+				KEYPALY = [0x12, KEYVALUE.KEY_PLAY],
+				KEYFUNC = [0x13, KEYVALUE.KEY_FUNC],
+				KEYPREV = [0x14, KEYVALUE.KEY_PREV],
+				KEYNEXT = [0x15, KEYVALUE.KEY_NEXT],
+				KEYSLOW = [0x16, KEYVALUE.KEY_SLOW],
+				KEYFAST = [0x17, KEYVALUE.KEY_FAST],
+				KEYINFO = [0x18, KEYVALUE.KEY_INFO],
+
+				KEYSPLIT4A = [0x19, KEYVALUE.KEY_SPLIT4],
+				KEYSPLIT4B = [0x1a, KEYVALUE.KEY_SPLIT5_8],
+				KEYSPLIT4C = [0x1b, KEYVALUE.KEY_SPLIT9_12],
+				KEYSPLIT4D  = [0x1c, KEYVALUE.KEY_SPLIT13_16],
+				KEYSPLIT8A  = [0x1d, KEYVALUE.KEY_SPLIT8],
+				KEYSPLIT9A = [0x1e, KEYVALUE.KEY_SPLIT9],
+				KEYSPLIT16 = [0x1f, KEYVALUE.KEY_SPLIT16],
+				
+				KEYZERO1 = [0x81, KEYVALUE.KEY_0],
+				KEYONE1 = [0x82, KEYVALUE.KEY_1],
+				KEYTWO1 = [0x83, KEYVALUE.KEY_2],
+				KEYTHREE1 = [0x84, KEYVALUE.KEY_3],
+				KEYFOUR1 = [0x85, KEYVALUE.KEY_4], 
+				KEYFIVE1 = [0x86, KEYVALUE.KEY_5],
+				KEYSIX1 = [0x87, KEYVALUE.KEY_6],
+				KEYSEVEN1 = [0x88, KEYVALUE.KEY_7],
+				KEYEIGHT1 = [0x89, KEYVALUE.KEY_8],
+				KEYNINE1 = [0x8a, KEYVALUE.KEY_9],
+				KEYTEN1 = [0x8b, KEYVALUE.KEY_10],
+				KEYELEV1 = [0x8c, KEYVALUE.KEY_11],
+				KEYTWEL1 = [0x8c, KEYVALUE.KEY_12],
+				KEYTHIR1 = [0x8e, KEYVALUE.KEY_13], 
+				KEYFOURT1 = [0x8f, KEYVALUE.KEY_15],
+				KEYFIF1 = [0x90, KEYVALUE.KEY_15],
+				
+				KEYPTZ = [0x21, KEYVALUE.KEY_PTZ],
+				KEYWIDE1 = [0x22, KEYVALUE.KEY_WIDE],
+				KEYTELE1 = [0x23, KEYVALUE.KEY_TELE],
+				KEYIRISCLOSE = [0x24, KEYVALUE.KEY_IRIS_CLOSE],
+				KEYIRISOPEN = [0x25, KEYVALUE.KEY_IRIS_OPEN],
+				KEYRFOCUSNEAR = [0x26, KEYVALUE.KEY_FOCUS_NEAR],
+				KEYFOCUSFAR = [0x27, KEYVALUE.KEY_FOCUS_FAR],
+				KEYBRUSH = [0x28, KEYVALUE.KEY_BRUSH],
+				KEYLIGHT = [0x29, KEYVALUE.KEY_LIGHT],
+				KEYSCAN = [0x2a, KEYVALUE.KEY_SCANON],
+				KEYTOUR = [0x2b, KEYVALUE.KEY_AUTOTOUR],
+				KEYPATTERN = [0x2c, KEYVALUE.KEY_PATTERN],
+				KEYSETPRE = [0x2d, KEYVALUE.KEY_SPRESET],
+				KEYGOTOPRE = [0x2e, KEYVALUE.KEY_GPRESET],
+				KEYDELPRE = [0x2f, KEYVALUE.KEY_DPRESET],
+				}	
+
+	function setAddr(addr)
+	{
+		RS485Addr = addr & 0xFF;
+	}
+
+	function ParseData(cmdBuf)
+	{
+		local ret = 0;
+
+		//no checksum
+		if (ret == 0)
+		{
+			foreach(k,v in KEYOperator)
+			{
+				local tmp = KEYOperator.rawget(k);
+				if (tmp[0] == cmdBuf[2])
+				{
+					if (0 == cmdBuf[3])
+					{
+						ret = tmp[1] | 0x1000;
+						return ret;
+					}
+					else
+					{
+						return tmp[1];
+					}
+				}
+			}
+			return KEYVALUE.KEY_UNKNOWN;
+		}
+		else
+		{
+			return KEYVALUE.KEY_UNKNOWN;
+		}
+	}
+}
+
+local CDaHua = DaHua();
+
+return CDaHua;

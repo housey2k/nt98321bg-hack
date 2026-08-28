@@ -1,0 +1,114 @@
+# !/bin/sh
+
+ENABLE=0
+TELEPHONE=
+ACCOUNT=
+PASSWORD=
+NETWORKTYPE=
+APNNO=
+LOCAL_IP=
+REMOTE_IP=
+NETMASK=
+if [ $# -gt 1  ]; then
+    echo "Usage: $0 [FileName]"
+    exit 1
+elif [ $# -eq 1 ]; then
+    MY_FILE=$1
+else
+    MY_FILE=$0
+fi
+
+if [ ! -f $MY_FILE ]; then
+    echo "$MY_FILE does not exist!"
+    exit 2
+fi
+	while read MY_LINE
+	do
+	if [ $MY_LINE = "[PPPCONFIG]" ]; then
+		continue
+	fi
+	if [ ${MY_LINE%%=*} = "ENABLE" ]; then
+		ENABLE=${MY_LINE##*=}
+		continue
+	fi
+	if [ ${MY_LINE%%=*} = "TELEPHONE" ]; then
+		TELEPHONE=${MY_LINE##*=}
+		continue
+	fi
+	if [ ${MY_LINE%%=*} = "ACCOUNT" ]; then
+		ACCOUNT=${MY_LINE##*=}
+		continue
+	fi
+	if [ ${MY_LINE%%=*} = "PASSWORD" ]; then
+		PASSWORD=${MY_LINE##*=}
+		continue
+	fi
+	if [ ${MY_LINE%=*} = "NETWORKTYPE" ]; then
+		NETWORKTYPE=${MY_LINE##*=}
+		continue
+	fi
+	if [ ${MY_LINE%%=*} = "APNNO" ]; then
+		APNNO=${MY_LINE##*=}
+		continue
+	fi
+	FLAG=0
+	done < $MY_FILE	
+	echo "###########################"
+	echo "TELEPHONE=$TELEPHONE"
+	echo "ACCOUNT=$ACCOUNT"
+	echo "PASSWORD=$PASSWORD"
+	echo "ENABLE=$ENABLE"
+	echo "APNNO=$APNNO"
+	echo "NETWORKTYPE=$NETWORKTYPE"
+	echo "###########################"
+export TELEPHONE ACCOUNT PASSWORD APNNO
+# 
+# This is the location of the script which dials the phone and logs
+# in.  Please use the absolute file name as the $PATH variable is not
+# used on the connect option.  (To do so on a 'root' account would be
+# a security hole so don't ask.)
+if [ $NETWORKTYPE = "0" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-DIAL
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+	TTYNAME=ttyUSB0
+elif [ $NETWORKTYPE = "1" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-td
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+	TTYNAME=ttyACM0
+elif [ $NETWORKTYPE = "2" ]; then
+	DIALER_SCRIPT=/usr/sbin/3gpd-wcdma
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+	TTYNAME=ttyUSB1
+else
+	DIALER_SCRIPT=/usr/sbin/3gpd-DIAL
+	DISCONNECT_SCRIPT=/usr/sbin/3gpd-disc
+	TTYNAME=ttyUSB0
+fi
+
+#route del default
+
+#
+# Initiate the connection
+# 
+# I put most of the common options on this command. Please, don't
+# forget the 'lock' option or some programs such as mgetty will not
+# work. The asyncmap and escape will permit the PPP link to work with
+# a telnet or rlogin connection. You are welcome to make any changes
+# as desired. Don't use the 'defaultroute' option if you currently
+# have a default route to an ethernet gateway.
+
+if [ $ENABLE = "0" ]; then
+   echo "pppoe disable"
+   exit 0
+else
+  echo "start pppoe enable"
+  exec /usr/sbin/pppd -detach user $ACCOUNT password $PASSWORD \
+  /dev/$TTYNAME 115200 					\
+	nocrtscts nocdtrcts local usepeerdns 		\
+	ipcp-accept-local ipcp-accept-remote 		\
+	noipdefault defaultroute 	\
+	debug kdebug 4 \
+	connect $DIALER_SCRIPT disconnect $DISCONNECT_SCRIPT \
+#	logfile /home/ppp2.4/pppdebug \
+fi
+#maxfail 0  init $INIT_SCRIPT disconnect $DISCONNECT_SCRIPT 

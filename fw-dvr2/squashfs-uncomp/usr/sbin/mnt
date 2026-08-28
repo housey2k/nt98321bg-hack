@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo "cmd: mnt [options]"
+echo "	nLen=length[\$options]:"
+echo "		nLen >= 4: mount 10.2.\$1"
+echo "		1< nLen < 4: mount 10.2.5.\$1"
+echo "		nLen == 1: mount 10.2.\$1.100"
+echo "		nLen == 0: mount 10.2.5.61"
+echo ""
+
+if [ $# == 0 ] ; then
+	mount -t nfs 10.2.5.61:/home/share /home -o nolock
+	echo "mount -t nfs 10.2.5.61:/home/share /home -o nolock"
+else
+	nLen=`echo ${#1}`
+	
+	if [ $nLen -ge 4 ];then
+		mount -t nfs 10.2.$1:/home/share /home -o nolock
+		echo "mount -t nfs 10.2.$1:/home/share /home -o nolock"
+	elif [ $nLen -gt 1 ];then
+		mount -t nfs 10.2.5.$1:/home/share /home -o nolock
+	  echo "mount -t nfs 10.2.5.$1:/home/share /home -o nolock"
+	else
+		mount -t nfs 10.2.$1.100:/home/share /home -o nolock
+		echo "mount -t nfs 10.2.$1.100:/home/share /home -o nolock"
+	fi
+fi

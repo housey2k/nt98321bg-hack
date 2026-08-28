@@ -1,0 +1,948 @@
+{
+	"Encode": [
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		},
+		{
+			"ExtraFormat": [
+				{
+					"VideoEnable": true,
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 236,
+						"Resolution": "D1",
+						"FPS": 6
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"MainFormat": [
+				{
+					"Video": {
+						"BitRateControl": "VBR",
+						"BitRate": 1536,
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			],
+			"SnapFormat": [
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				},
+				{
+					"Video": {
+						"Resolution": "D1"
+					}
+				}
+			]
+		}
+	]
+}

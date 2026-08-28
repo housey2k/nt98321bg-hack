@@ -1,0 +1,2 @@
+SUBPREFIX = 64
+HOSTIP = 0:0:0::0

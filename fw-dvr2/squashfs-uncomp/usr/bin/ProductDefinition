@@ -1,0 +1,10 @@
+{
+   "Vendor" : "General",
+   "Hardware" : "AHB8008R-LME-NVT",
+   "PackSize" : 12288,
+   "PreRecSize" : 256,
+   "LogoArea" : {"Begin": "0xF60000", "End": "0xF80000"},
+   "PreRecMaxNum_Cloud" : 4,
+   "PreRecMaxMem_Cloud": 6144,
+   "CompatibleVersion" : 1
+}

@@ -1,0 +1,909 @@
+html,
+body {
+	height: 100%;
+	min-width: 1230px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 12px;
+	color: #767489;
+	opacity: 1;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, 
+form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+ol {
+	padding: 0;
+	list-style-type: none;
+	margin: 0;
+	height: 25px
+}
+.selectEnable,
+.selectDisable {
+	width: 50px;
+	height: 18px;
+	margin-top: 6px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border: 0;
+	outline: 0
+}
+li {
+    list-style: none;
+}
+*:focus {outline: none;}
+table{border-collapse:collapse;border-spacing:0;}
+.PswEyeShow::-ms-clear,
+.PswEyeShow::-ms-reveal {
+	display: none
+}
+.none {
+	display: none
+}
+.block {
+	display: block
+}
+span{
+	position: relative;
+}
+
+/*Calendar*/
+.CalendarCtrl {
+	border-collapse: separate;
+	width: 199px;
+	height: 175px;
+	z-index: 99
+}
+.CalendarCtrl .CalendarYMHeader {
+	height: 28px;
+	overflow: hidden
+}
+.CalendarCtrl .CalendarYMHeader th {
+	height: 19px;
+	font-size: 12px;
+	text-align: center;
+	overflow: hidden;
+	padding-top:7px;
+}
+.prevMonth {
+	width: 19px;
+	height: 19px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.nextMonth {
+	width: 19px;
+	height: 19px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.selectMonth {
+	overflow: hidden;
+	float: left;
+	margin-left: 6px;
+}
+.selectYear {
+	float: left;
+	overflow: hidden;
+}
+.CalSelect {
+	font-size: 12px;
+	background: transparent;
+	padding: 0px;
+	width: 66px;
+	height:19px;
+	-webkit-appearance: none
+}
+.CalSelect:hover {
+	cursor: pointer
+}
+.CalendarCtrl tr.days {
+	width: 199px
+}
+.CalendarCtrl tr.days th {
+	height: 28px;
+	font-size: 12px;
+	text-align: center;
+	width: 28px;
+	overflow: hidden;
+	border: 0
+}
+.CalendarCtrl th{
+	font-size: 12px
+}
+.CalendarCtrl th span {
+	font-weight: bold
+}
+.CalendarCtrl tbody td div{
+	height: 20px;
+	line-height: 20px;
+	width: 20px;
+	font-size: 12px;
+	text-align: center;
+	overflow: hidden;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.CalendarCtrl tbody td div.date {
+	cursor: pointer;
+}
+.CalendarCtrl tbody td div.date.chosen {
+	font-weight: bold;
+}
+.timer tr td div {
+	width: 20px;
+	overflow: hidden
+}
+.timer tr td div select {
+	width: 66px;
+	-webkit-appearance: none;
+	margin: 0;
+	padding: 0;
+	height: 26px;
+	border: 0
+}
+/* mask Whole*/
+#MaskLayout {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	right: 0;
+	bottom: 0;
+	z-index: 10001;
+	border: 0;
+	opacity: .6;
+	overflow: hidden;
+	filter: alpha(opacity=60)
+}
+/*mask part*/
+.MaskDiv {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 1000
+}
+/*prompt*/
+#MsgPaop_box {
+	position: fixed;
+	left: 2px;
+	bottom: 2px;
+	z-index: 10004;
+	width: 240px;
+	height: 150px;
+	overflow: hidden
+}
+#MsgPaop {
+	width: 240px;
+	height: 150px;
+	font-size: 12px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	-moz-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none;
+}
+#Paoptitle {
+	width: 200px;
+	overflow: hidden;
+	padding-top: 10px;
+	float: left;
+	padding-left: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#PaopClose {
+	margin-top: 13px;
+	margin-right: 13px;
+	width: 15px;
+	height: 15px;
+	float: right;
+	cursor: pointer
+}
+.alertBox {
+	max-height: 260px;
+	width: 460px;
+	padding: 0 10px;
+	white-space: normal;
+	word-break: break-all;
+	text-align: center;
+	vertical-align: middle;
+	overflow-y: auto;
+	text-align: center
+}
+
+/*menu*/
+.header {
+	height: 70px;
+	overflow: hidden;
+	-moz-user-select: none;
+	display: none;
+	margin-bottom: 10px;
+}
+.headerMenu {
+	position: relative;
+	height: 70px;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0;
+	float: right;
+	display: inline;
+}
+.logoImg {
+	height: 42px;
+	width: 156px;
+	margin-left: 41px;
+	margin-top: 14px;
+	float: left
+}
+.menuBg {
+	float: right;
+	display: inline-block;
+}
+.other {
+	float: right;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 15px;
+}
+.otherBox {
+	width: auto;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline;
+	cursor: pointer
+}
+.otherBtn {
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 60px;
+	height: 70px;
+	line-height: 70px;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Source Han Sans CN;
+}
+.otherLogo {
+	float: right;
+	width: 24px;
+	height: 24px;
+	margin-top: 23px;
+	margin-left: 10px;
+}
+.Menu {
+	float: right;
+	display: inline-block
+}
+.menuBox {
+	width: auto;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline;
+	cursor: pointer
+}
+.menuBtn {
+	line-height: 70px;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Source Han Sans CN;
+	width: 140px;
+	height: 70px;
+}
+#menuMask {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	background-color: transparent
+}
+/*psw poap*/
+.popupBox {
+	position: absolute;
+	left: 35%;
+	width: 422px;
+	top: 35%;
+	z-index: 10002;
+	text-align: center;
+	display: none
+}
+.popupBox li {
+	line-height: 30px;
+	font-style: normal;
+	list-style-position: inherit;
+	list-style-type: none
+}
+.popupBoxTitle {
+	width: 422px;
+	height: 30px;
+	border-bottom: 0
+}
+.popupBoxContent {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 422px;
+	min-height: 150px;
+	height: auto;
+	border-top: 0
+}
+.popupBox em {
+	line-height: 30px;
+	font-style: normal
+}
+.popupBox .inputTxt {
+	width: 178px;
+	height: 25px;
+	line-height: 25px
+}
+.popupBoxContent .btn {
+	height: 30px;
+	width: 85px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 30px;
+	font-size: 12px;
+	float: left;
+	border: 0
+}
+.popupBoxContent .btn:first-child {
+	margin-left: -35px
+}
+#login_user_content li {
+	height: 30px;
+	text-align: left
+}
+#login_user_content label {
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	text-align: right
+}
+#login_btn_user_ok {
+	margin-left: 174px;
+	margin-top: 10px
+}
+#login_user_content #strengthBar {
+	height: 16px;
+	display: none
+}
+#login_user_content .strengthBar_div {
+	position: relative;
+	left: 152px;
+	top: -6px
+}
+.progress-bar_wrap {
+	width: 166px;
+	height: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden
+}
+.progress-bar_item {
+	display: inline-block;
+	height: 100%;
+	width: 40px;
+	float: left;
+	visibility: hidden
+}
+.progress-bar_item.active {
+	visibility: visible
+}
+.progress-bar_item-1.active,
+.progress-bar_item-2.active,
+.progress-bar_item-3.active {
+	margin-left: 2px
+}
+.progress-bar_wrap .progress-bar_text {
+	display: inline-block;
+	margin-left: 5px
+}
+/*plugin*/
+#ipcplugin {
+	width: 1px;
+	height: 1px;
+	z-index: 101
+}
+/*content*/
+.container {
+	float: left;
+	margin: 0px;
+}
+.main {
+	overflow: hidden;
+	height: 100%
+}
+.mcontainer {
+	height: 100%;
+	width: 100%
+}
+#login {
+	overflow: hidden
+}
+
+#SecondaryContent {
+	width: 630px;
+	left: 30%;
+	top: 28%;
+	position: absolute;
+	z-index: 10002
+}
+
+#SecondaryContent .SecondTitle {
+	height: 38px;
+	line-height: 38px;
+	width: 100%;
+	text-align: center
+}
+
+.SecondTitle li {
+	text-align: center
+}
+
+.SecondTitle .second_close ,
+.SecondTitle .second_close2,
+.SecondTitle .second_close_PointLoopSet{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	position: absolute;
+	right: 14px;
+	top: 10px;
+	font-size: 32px;
+	cursor: pointer
+}
+
+.content_details {
+	width: 540px;
+	margin: 15px auto
+}
+
+.PswEyeShow,
+.PswEyeShow2 {
+	float: left
+}
+
+.psw_eye_arc,
+.psw_eye_arc2 {
+	float: left;
+	width: 16px;
+	height: 10px;
+	margin: 12px 2px 3px -24px;
+	border-bottom: 2px solid transparent;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-radius: 16px/10px;
+	display: inline-block;
+	cursor: pointer;
+	display: none
+}
+
+.psw_eye_cicle {
+	width: 4px;
+	height: 4px;
+	border-radius: 2px/2px;
+	margin: 2px 6px 4px 6px
+}
+
+.btn {
+	height: 30px;
+	width: 85px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 30px;
+	font-size: 12px;
+	float: left;
+	border: 0
+}
+
+.inputTxt {
+	width: 298px;
+	height: 23px;
+	line-height: 23px;
+	margin-top: 5px
+}
+
+.cfg_row {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px
+}
+
+#SecondaryContent.Tips_Content {
+	width: 456px;
+	top: 30%;
+	left: 36%
+}
+
+#SecondaryContent .confirm_prompt {
+	padding: 10px 26px
+}
+
+.confirm_prompt .check_box {
+	margin-bottom: 8px
+}
+
+.Tips_Content .tips_prompt {
+	text-align: center
+}
+
+.Tips_Content .content_details {
+	width: 456px;
+	padding-top: 20px
+}
+
+.confirm_prompt .btn_box {
+	margin: 0 auto;
+	width: 200px;
+	height: 32px;
+	clear: both
+}
+
+.tips_prompt .tips_str,
+.confirm_prompt .confirm_str {
+	line-height: 24px;
+	margin-bottom: 22px;
+	padding: 0 26px;
+	text-align: center
+}
+
+.confirm_prompt #checkPsw_input {
+	width: 200px;
+	margin-left: 108px;
+	margin-bottom: 22px
+}
+
+#SecondaryContent.Tips_Content2 {
+	width: 476px;
+	height: 204px;
+	top: 30%;
+	left: 34%
+}
+
+.Tips_Content2 .inputLabel {
+	display: inline-block;
+	text-align: right;
+	width: 98px;
+	padding-right: 10px;
+	height: 25px;
+	line-height: 25px
+}
+
+.Tips_Content2 .inputTxt {
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	margin-top: 3px
+}
+.cfg_row_left {
+	display: inline-block;
+	width: 160px;
+	height: 30px;
+	float: left
+}
+.cfg_row_right {
+	display: inline-block;
+	width: 50%;
+	height: 30px;
+	line-height: 30px;
+	float: left
+}
+
+#ForgetPwdContent {
+	width: 700px;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	margin-left: -350px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 30px;
+	z-index: 10002
+}
+
+#ForgetPwdContent .SecondTitle {
+	height: 38px;
+	line-height: 38px;
+	width: 100%;
+}
+#ForgetPwdContent .content_details {
+	padding: 20px 30px;
+	width: auto
+}
+#ForgetPwdContent  .cfg_row {
+	margin-bottom:10px;
+}
+#ForgetPwdContent  .cfg_row_right {
+	width:auto;
+}
+#ForgetPwdContent .select {
+	width: 400px;
+	height: 25px;
+	margin-top: 3px
+}
+#ForgetPwdContent input{
+	width: 400px;
+}
+#ForgetPwdContent .btn_box{
+	height:32px;
+	margin: 20px auto;
+	padding-top:20px;
+	padding-left:200px;
+}
+#QRCode{
+	margin-left:75px;
+	overflow:hidden;
+}
+.info_falg{
+	width: 20px; 
+	height: 20px; 
+	margin-top: 5px; 
+	float: left
+}
+.single-qr {
+	text-align: center;
+	float: left;
+}
+#QRCode .single-qr{
+	margin-right: 120px;
+}
+.QR{
+	padding:5px 5px;
+	width:120px;
+	height:120px;
+}
+#period_dialog, #PtzLink_dialog{
+	z-index: 10005;
+}
+
+.dialog_role{
+	position: absolute;
+	text-align: left;
+	top: 130px;
+	left: 50%;
+	font-size: 12px;
+	line-height: 30px;
+	z-index: 10002;
+}
+.dialog_role .SecondTitle {
+	height: 38px;
+	line-height: 38px;
+	width: 100%;
+}
+.dialog_role .content_details {
+	padding: 20px 25px;
+	margin: 0;
+	width: auto
+}
+.dialog_role .btn_box {
+	margin: 20px 0 0 0;
+	height: 32px;
+	position: relative;
+	clear: both
+}
+.dialog_role .cfg_row_right {
+	width: auto;
+}
+.setup-ptz-form {
+	overflow: hidden
+}
+.setup-ptz-form .form-group {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 0px;
+	height: 30px;
+	padding: 0
+}
+
+.setup-ptz-form  .form-group label {
+	width: 100px;
+	float: left;
+	line-height: 30px;
+}
+.setup-ptz-form  .select {
+	width: 120px;
+	float: left;
+}
+.setup-ptz-form .inputTxt{
+	width: 75px;
+	margin-left: 5px;
+	padding-left: 3px;
+	float: left;
+}
+
+.dialog_role .time-div,
+#VideoColorBox .time-div {
+	border-radius: 5px;
+	padding: 0 10px;
+	line-height: 25px;
+	float: left;
+}
+.dialog_role .time-div input,
+#VideoColorBox .time-div input {
+	width: 17px;
+	height: 23px;
+	line-height: 23px;
+	border:0;
+	margin: 2px 0 0 0;
+	float:left;
+}
+
+.timespan {
+	float: left;
+	margin-top:5px;
+	width:35px;
+}
+.timeSplit{
+	width: 10px;
+	float: left
+}
+.timeSpace{
+	width: 15px;
+	margin-left: 10px;
+	float: left;
+}
+#period_dialog .Sectspan {
+	float: left;
+}
+
+#period_dialog  .Sectspan:nth-child(2){
+	margin-left: 100px;
+}
+.week-list {
+	float: left;
+	height: 175px;
+	width: 96px;
+	margin-right: 2px;
+	padding-right: 4px;
+}
+.week-list ul li {
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	padding-right: 4px;
+	text-align: right;
+}
+
+.check-box{
+	display: inline-block;
+	float: none;
+	width: 100%;
+}
+
+.check-box span {
+	width: auto;
+	float: left;
+	margin: 8px 30px 0px 0px;
+}
+
+span input[type="checkbox"] {
+	position: absolute !important;
+	cursor: pointer;
+	height: 19px;
+	width:19px;
+	left: 0;
+}
+span input[type=checkbox]:not(old) {
+	padding : 0;
+	opacity : 0;
+}
+span input[type='radio']:not(old){
+	position: absolute;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	opacity: 0;
+	left: 0;
+}
+span input[type=checkbox]:not(old) + label {
+	display : inline-block;
+	float: left;
+	padding-left: 30px;
+	line-height: 22px;
+	font-size: 12px;
+	cursor: pointer;
+}
+span input[type='radio']:not(old) + label{
+	float: left;
+	padding-left: 23px;
+	line-height: 18px;
+	font-size: 12px;
+	cursor: pointer;
+	width: auto;
+}
+
+.table-responsive {
+	width: 100%;
+	height:100%;
+    float: left
+}
+.table-head {
+	position: relative;
+	overflow: hidden;
+}
+.table-content {
+	white-space: normal;
+	position: relative;
+	width: 100%;
+	overflow-y: auto;
+	min-height: 0;
+}
+.grid {
+	margin: 0px;
+	table-layout: fixed;
+	width: 100%;
+	max-width: none;
+	border-spacing: 0px;
+	empty-cells: show;
+	border-width: 0px;
+	outline: 0px none;
+	border-collapse: separate;
+}
+.table-responsive .table tr{
+	height: 30px
+}
+.table-responsive .table td{
+	text-align: center
+}
+
+.table-responsive .table>thead>tr>th {
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center
+}
+
+/* .table-responsive .table tr:nth-child(even) {
+	background: #d8dde3;
+} */
+#OcxTip{
+	display:inline-block;
+	/*background-color: #797D84;*/
+	width:260px;
+	height: 60px;
+	border-radius: 6px;
+	margin: auto;
+	position:absolute;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+#OcxTip span{
+	color:#000;
+	height:20px;
+	line-height: 20px;
+	word-break:normal; 
+	width:auto; 
+	display:block;
+	white-space:pre-wrap;
+	word-wrap : break-word;
+	overflow: hidden;
+}
+#LossOcxTip{
+	color:#fff;
+	height:30px;
+	line-height: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #4486F4;
+	border-radius:16px;
+}

@@ -1,0 +1,14 @@
+#!/bin/sh
+	exec /usr/sbin/chat -v	 \
+	ABORT		"BUSY\r"	\
+	ABORT		"NO CARRIER"	\
+	""	"AT"			\
+	TIMEOUT 30	\
+	""	"ATH0"			\
+	TIMEOUT 30	\
+	""	"AT+CFUN=1" \
+	""	"AT+CGDCONT=1,\"IP\",\"$APNNO\",,0,0" \
+	""	"AT+CGDCONT=2,\"IP\",\"$APNNO\",,0,0" \
+	"" "ATD$TELEPHONE" \
+	CONNECT 2800000
+	

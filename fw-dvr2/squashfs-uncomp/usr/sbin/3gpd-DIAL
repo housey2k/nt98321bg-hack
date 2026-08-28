@@ -1,0 +1,10 @@
+#!/bin/sh
+	exec /usr/sbin/chat -v	 \
+	ABORT		"\nBUSY\r"	\
+	ABORT		"\nNO CARRIER\r"	\
+	""		"AT"			\
+	TIMEOUT		15				\
+	""				"ATH0"			\
+	TIMEOUT		30	\
+	"" "ATD$TELEPHONE"	\
+	CONNECT

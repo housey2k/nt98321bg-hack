@@ -1,0 +1,10 @@
+{
+    "IOSEnable": true,
+    "IOSLink": "https://itunes.apple.com/cn/app/citrox-cftv/id1564375147",
+    "AndroidEnable": true,
+    "AndroidLink": "https://play.google.com/store/apps/details?id=com.mobile.citroxcam",
+    "OtherEnable": false,
+    "OtherName": "other",
+    "OtherLink": "",
+    "SNEnable": true
+}
